@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/akkus/Desktop/Ameet/Proj1/Main6.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>DeServ International</title>
+<link href="mainCss.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+	<script>var __adobewebfontsappname__="dreamweaver"</script>
+	
+	<link href="../formLoad.js">
+	
+	 <script type="text/javascript">
+        var subcategory = {
+            MAN: ["S50MCC", "S60MCC", "S70MCC"],
+            SULZER: ["RTA62U", "RTA72U", "RTA84"],
+            MITSUBISHI: ["UEC52", "UEC60"]
+        }
+		
+		function makeSubmenu(value) {
+            if (value.length == 0) document.getElementById("categorySelect").innerHTML = "<option></option>";
+            else {
+                var citiesOptions = "";
+                for (categoryId in subcategory[value]) {
+                    citiesOptions += "<option>" + subcategory[value][categoryId] + "</option>";
+                }
+                document.getElementById("categorySelect").innerHTML = citiesOptions;
+            }
+        }
+
+        function displaySelected() {
+            var country = document.getElementById("category").value;
+            var city = document.getElementById("categorySelect").value;
+            alert(country + "\n" + city);
+        }
+
+        function resetSelection() {
+            document.getElementById("category").selectedIndex = 0;
+            document.getElementById("categorySelect").selectedIndex = 0;
+        }
+    </script>
+	
+	
+
+</head>
+
+<body onload="resetSelection()">
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="main-table-border">
+  <tbody>
+    <tr>
+      <td colspan="2" align="left" valign="middle"><div class="primary_header">
+          DeServ International </div>       		
+	</td></tr>
+    <tr>
+      <td width="22%" valign="top" bgcolor="#7F7B7B">
+          <table width="100%" border="0" bgcolor="#7F7B7B" align="left" cellpadding="1" cellspacing="1">
+	    <form name="myform" id="myForm"></form><tbody>
+    <tr>
+      <td width="26%">Make: </td>
+      <td width="74%"><select name="category" onchange="makeSubmenu(this.value)" class="rounded-input" id="category">
+		  <option value="" disabled="" selected="">Select</option>
+        <option>MAN</option>
+		<option>SULZER</option>
+		<option>MITSUBISHI</option>
+		  </select>		
+		</td>
+    </tr>
+    <tr>
+      <td>Type:</td>
+      <td><strong>
+        <select id="categorySelect" name="make2" class="rounded-input">
+			<option value="" disabled="" selected="">Select</option>
+<option></option>
+        </select>
+      </strong></td>
+		
+    </tr>
+    <tr>
+      <td> Item: </td>
+      <td><select name="make5" class="rounded-input" id="make5">
+        <option value="abb">Select</option>
+        <option value=" ">Liner </option>
+        <option value=" ">Crown </option>
+        <option value=" ">Head </option>
+        <option value=" ">Skirt </option>
+      </select></td>
+		
+    </tr>
+    <tr>
+      <td>Licence:</td>
+      <td>        <input name="textfield" type="text" class="rounded-input" id="textfield"></td>
+    </tr>
+    <tr>
+      <td>Mark:</td>
+      <td><input name="textfield2" type="text" class="rounded-input" id="textfield2"></td>
+    </tr>
+    <tr>
+      <td>IMO:</td>
+      <td><input name="textfield3" type="text" class="rounded-input" id="textfield3"></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" bgcolor="#7F7B7B" style="text-align: center">
+		  <a href="pg1.html" class="button">Submit</a>
+
+		 
+      </td></tr>
+  </tbody>
+</table>
+			</td>
+	  <td width="78%" align="center" valign="top" bgcolor="#9D9D9D">
+	
+	    <p></p>
+    	
+	</td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+</body></html>
